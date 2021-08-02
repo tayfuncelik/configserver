@@ -1,0 +1,30 @@
+server:
+  port: 9005
+
+
+spring:
+  application:
+    name: blog-service
+  datasource:
+    username: postgres
+    password: 12345678
+    url: jdbc:postgresql://localhost:5434/blog-service
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+checkall:
+  app:
+    jwtSecret: BvPHGM8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0oK2mJ3pd3YG4lxA9i8bj6OTbadwezxgeEByY
+    jwtRegisterSecret: jwtRegisterSecret
+    jwtExpirationMs: 43200000
+    jwtRegisterMs: 3600000
+
+pdfBucketName: ch-test-storage
+
+bucket:
+  imagePath: images/
+  pdfPath: pdf/
